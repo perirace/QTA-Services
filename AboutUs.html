@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <Head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <style>
+            p {
+                text-align: left; 
+                font-family: Arial; 
+                font-size: 12.5px;
+                margin-left: 40px;
+            }
+ 
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: arial;
+                font-size: 12.5px;
+                text-align: center;
+                background-color: rgb(176, 175, 176);
+                width: 160px;
+                border-radius: 3px;
+            }
+            .AUblock1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 12px 16px;
+            }
+
+            .AUsubblock1 {
+                display: flex;
+                align-items: center;
+                background-color: rgb(176, 175, 176);
+                width: 200px;
+                height: 50px;
+                border-radius: 6px;
+                gap: 0px;
+                justify-content: flex-start;
+            }
+
+            .AUblock2 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding-top: 15px;
+                padding-bottom: 30px;
+            }
+
+            .AUsubblock2 {
+                background-color: rgb(176, 175, 176);
+                width: 300px;
+                height: 50px;
+                border-radius: 6px;
+            }
+
+            .AUcontainer1 {
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(224, 224, 224);
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .AUsubcontainer1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-right: 40px;
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+            
+            .AUsmallcontainer1 {
+                margin-left: 40px;
+                background-color: white;
+                border-radius: 10px;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0;
+                flex: 1;
+                width: 50px;
+                height: 180px;
+            }
+
+            .AUcontainer2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                margin-right: 40px;
+                margin-bottom: 30px;
+            }
+
+            .AUsubcontainer2 {
+                margin-left: 40px;
+                background-color: rgb(209, 208, 208);
+                border-radius: 10px;
+                padding: 3px;
+                flex: 1;
+                min-width: 250px;
+            }
+
+            .AUsmallcontainer2P1 {
+                display: flex; 
+                flex-direction: row; 
+                align-items: center; 
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .AUsmallcontainer2P2 {
+                text-align: left;
+                margin-left: 40px; 
+                background-color: white;
+                margin-bottom: 5px; 
+                height: 60px; 
+                width: 460px; 
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                
+            }
+
+            .AUsmallcontainer2P3 {
+                text-align: left;
+                margin-left: 40px; 
+                background-color: white; 
+                margin-bottom: 5px;
+                height: 40px; 
+                width: 460px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 6px;
+            }
+            
+            .AUsmallcontainer2P4 {
+                text-align: left;
+                margin-left: 40px; 
+                background-color: white;
+                margin-top: 10px;
+                height: 70px; 
+                width: 460px; 
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 6px;
+            }
+
+            .AUcontainer3 {
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(224, 224, 224);
+                justify-content: center;
+                flex-wrap: wrap;
+                height: 850px;
+            }
+            .AUsubcontainer3P1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-right: 40px;
+                margin-bottom: 30px;
+            }
+
+            .AUsubcontainer3P2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                background-color: white;
+                width: 1150px;
+                height: 130px;
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+            
+            .AUsmallcontainer3P1 {
+                margin-left: 40px;
+                background-color: white;
+                align-items: center;
+                border-radius: 10px;
+                padding: 0;
+                flex: 1;
+                width: 20px;
+                height: 500px;
+            }
+
+            .AUsmallcontainer3P2 {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-right: 40px;
+                margin-bottom: 30px;
+            }
+
+            .AUverysmallcontainer3P1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .AUcontainer4{
+                display: flex;
+                flex-direction: row;
+                background-color: white;
+                justify-content: center;
+                flex-wrap: wrap;
+                height: 160px;
+            }
+
+            .AUsubcontainer4P1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-right: 40px;
+                margin-bottom: 30px;
+                gap: 100px;
+            }
+
+            .AUsubcontainer4P2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-right: 40px;
+                margin-bottom: 30px;
+                gap: 160px;
+            }
+
+            h1 {
+                text-align: center; 
+                font-family: Arial; 
+                font-size: 50px; 
+                margin: 0;
+            }
+
+            h2, h3, h4 {
+                font-family: Arial; 
+                margin: 0; 
+                margin-left: 40px;
+            }
+        </style>
+    </Head>
+    <Body>
+        <div>
+            <h1>About QTA Printing Services</h1>
+            <p style="text-align: center;">Your trusted neighborhood partner for reliable, high-quality printing-from everyday documents to large format business <br>signages</p>
+        </div>
+        <div class="AUblock1">
+            <div class="AUsubblock1">
+                <div><p style="font-size: 20px; text-align: center; background-color: white; width: 30px; height: 30px; border-radius: 3px; justify-content: center; align-items: center; margin-left: 10px;">⛉</p></div>
+                <div><p style="margin: 8px;""><b>BIR & DTI Registered</b><br>Legitimate and Compliant</p></div>
+            </div>
+            <div class="AUsubblock1">
+                <div><p style="font-size: 20px; text-align: center; background-color: white; width: 30px; height: 30px; border-radius: 3px; justify-content: center; align-items: center; margin-left: 10px;">🗓</p></div>
+                <div><p style="margin: 8px ;""><b>9 Years in Service</b><br>Serving local clients</p></div>
+            </div>
+            <div class="AUsubblock1">
+                <div><p style="font-size: 20px; text-align: center; background-color: white; width: 30px; height: 30px; border-radius: 3px; justify-content: center; align-items: center; margin-left: 10px;">🗲</p></div>
+                <div><p style="margin: 8px ;""><b>Fast Turnaround</b><br>Express same-day ready</p></div>
+            </div>
+        </div>
+        <div class = "AUcontainer1">
+            <p style="margin-left: 40px; margin-top: 30px;">𖡊 Why Choose QTA Printing Services</p>
+            <h2>Printing made straightforward, personal, <br>and reliable.</h2>
+            <p style="margin-left: 40px;">We started as an accesible neighborhood printing counter to serve students, local businesses, and<br>community organizers. Today, we handle everything from single-page laminations to bulk commercial<br>signages-without losing our friendly, personal service.</p>
+                <div class = "AUsubcontainer1">
+                    <div class="AUsmallcontainer1">
+                        <br>
+                        <h3>Quality You Can Trust</h3>
+                        <p style="margin-left: 40px; margin-bottom: 30px">Crisp colors, durable waterproof media, and<br>inspected prints everytime. We review your<br>files before running to make sure your text<br>ins't blurry and your artwork looks sharp.</p>
+                        <p style="margin-left: 40px; margin-bottom: 0px">✓ Sample swatches available in-store</p>
+                    </div>
+                    <div class="AUsmallcontainer1">
+                        <br>
+                        <h3>Fair & Transparent Pricing</h3>
+                        <p style="margin-left: 40px; margin-bottom: 30px">No suprise changes. Accurate per-square-<br>foot rates and honest bulk discounts with<br>instant estimates so you always know what<br>to expect before we print</p>
+                        <p style="margin-left: 40px; margin-bottom: 0px">🗐 Official receipts (OR) provided</p>
+                    </div>
+                    <div class="AUsmallcontainer1">
+                        <br>
+                        <h3>Fast Local Delivery & Pickup</h3>
+                        <p style="margin-left: 40px; margin-bottom: 30px">Convenient walk-in counter with same-day<br>express options for rush needs. We<br>coordinate smooth courier dispatch (Grab/<br>Lalamove) or curbside pickup for large items.</p>
+                        <p style="margin-left: 40px; margin-bottom: 0px">◴ Same-day queue for rush files</p>
+                    </div>
+                </div>
+        </div>
+        <div class="AUcontainer2">
+                <div class="AUsubcontainer2">
+                    <div class="AUsmallcontainer2P1">
+                        <div><h1 style="margin-left: 40px; background-color: white; border-radius: 6px; width: 55px; height: 55px; align-items: center; display: flex; justify-content: center;">⛉</h1></div>
+                        <div><h3 style="margin: 15px;">Physical Counter & Workshop</h3><p style="margin: 15px;">Walk-ins and consultations welcome</p></div>
+                    </div>
+                    <p style="margin-left: 40px; margin-top: 0px;">Drop by our shop anytime during operating hours to review paper weights<br> vinyl finishes, or collect your finished jobs.</p>
+                        <div>
+                            <div class="AUsmallcontainer2P2">
+                                <h2 style="margin: 15px;">⟟</h2>
+                                <p style="margin: 10px;"><b>Address:</b><br>Unit 4B Commercial Bldg., Main ave., Metro Commercial District,<br>Metro Manila</p>
+                            </div>
+                            <div class="AUsmallcontainer2P2">
+                                <h2 style="margin: 5px;">⛟</h2>
+                                <p style="margin: 10px;"><b>Curbside Loading:</b><br>Dedicated parking spot for hassle-free loading of large tarps and<br>Sintra boards.</p></div>
+                        </div>               
+                </div>
+                <div class="AUsubcontainer2">
+                    <div class="AUsmallcontainer2P1">
+                        <div><h1 style="margin-left: 40px; background-color: white; border-radius: 6px; width: 55px; height: 55px; align-items: center; display: flex; justify-content: center;">◴</h1></div>
+                        <div><h3 style="margin: 15px;">Store Hours & Rush Support</h3><p style="margin: 15px;">Reliable schedules Mondays through Saturday</p></div>
+                    </div>
+                        <div>
+                            <div class="AUsmallcontainer2P3"><p style="margin: 25px;">Monday - Fridayㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ8:00 AM - 6:00 PM</p></div>
+                            <div class="AUsmallcontainer2P3"><p style="margin: 25px;">Saturdayㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ 8:30 AM - 5:00 PM</p></div>
+                            <div class="AUsmallcontainer2P4">
+                                <h2 style="margin: 25px;">🕻</h2>
+                                <p style="margin: 0px;"><b>Need an Emergency Rush Print?</b><br>Cut-off is 2:00 PM daily for same-day productionㅤ</p>
+                                <a href="contact" style="width: 85px; align-self: center; padding: 5px; border-radius: 6px;">Contact Now</a>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <br>
+        <div class="AUcontainer3">
+            <p style="text-align: center; background-color: rgb(176, 175, 176); width: 300px; align-self: center; border-radius: 6px;"><b>✔ Legitimate Official Government Compliant</b></p>
+            <h2 style="text-align: center">Verified Business Credentials & Permits</h2>
+            <p style="text-align: center;">We are fully registered and compliant with national and local Philippine business standards,<br>providing authentic official receipts (OR) and tax invoices for all accounts</p>  
+                <div class = "AUsubcontainer3P1">
+                    <div class="AUsmallcontainer3P1">
+                        <br>
+                        <br>
+                        <img src="Core.gif" width="480px" height="230px" style="display: block; margin: 0 auto; border-radius: 6px;">
+                        <p style="text-align: center; background-color: rgb(176, 175, 176); width: 160px; align-self: center; border-radius: 6px;"><b>🗲 BIR Tax Verified</b></p>
+                        <h4>BIR Certificate of Registration</h4>
+                        <p>Registered taxpayer with the Bureau of Internal Revenue<br>(BIR) for official invoicing, VAT/Non-VAT commercial receipts,<br>and corporate compliance documentation.</p>
+                        <p>__________________________________________________________________</p>
+                        <div class="AUverysmallcontainer3P1">
+                            <p>Verified Active Entry</p>
+                            <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                            <a href="BIR_Certificate" style="padding: 5px; border-radius: 6px;"> View Full BIR Certificate 👁</a>
+                        </div>
+                    </div>
+                    <div class="AUsmallcontainer3P1">
+                        <br>
+                        <br>
+                        <img src="Core.gif" width="480px" height="230px" style="display: block; margin: 0 auto; border-radius: 6px;">
+                        <p style="text-align: center; background-color: rgb(176, 175, 176); width: 160px; align-self: center; border-radius: 6px;"><b>🗲 DTI & LGU Compliant</b></p>
+                        <h4>DTI & Mayor's Business Permit</h4>
+                        <p>Authorized commercial printing operator recognized by the<br>Department of Trade and Industry & Local Government.<br>Validated annually for strict consumer protection.</p>
+                        <p>__________________________________________________________________</p>
+                        <div class="AUverysmallcontainer3P1">
+                            <p>Current Year Validated</p>
+                            <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                            <a href="Permit" style="padding: 5px; border-radius: 6px;"> View Business Permit 👁</a>
+                        </div>
+                    </div>
+                </div>
+            <div class="AUsubcontainer3P2">
+                    <div><h2 style="margin-left: 10px; margin-top: 10px;">Have a print project in mind? We're<br>ready to help bring your ideas to life.</h2><p style="margin-left: 10px;">Send us your file dimensions or visit our main shop counter for paper weight inspections and quick<br>quote approvals.</p></div>
+                    <div><p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p></div>
+                    <div><a href="inquiry" style="text-align: center; background-color: rgb(176, 175, 176); width: 160px; align-self: center; padding: 8px; border-radius: 6px;">Request an Inquiry╰┈➤</a></div>     
+            </div>
+        </div>
+        <div class="AUcontainer4">
+            <div class="AUsubcontainer4P1">
+                <div><p><b>QTA<br>Printing Services</b><br><br>Your trusted partner for quality, high-<br>precision local printing solutions.</p></div>
+                <div><p><b>Quick Links</b><br>Home<br>Services<br>Pricing<br>About Us<br>FAQ<br>Contact Us</p></div>
+                <div><p><b>Core Services</b><br>Tarpaulin Printing<br>Sticker Printing<br>Signage Printing<br>Sintra Board Printing Us<br>Document Printing</p></div>
+                <div><p><b>Visit Our Shop</b><br>🖈 National 1025 Brgy. Pag-asa<br>ㅤBinangonan Rizal<br>◷ Mon - Sat: 8:00 AM to 6:00 PM</p></div>
+            </div>
+            <div class="AUsubcontainer4P2">
+                <div><p>© QTA Printing Services. All rights reserved.</p></div>
+                <div><p>☏ 02-7617311ㅤㅤ🕻 09178417399ㅤㅤ✉ qtaprintingservices@gmail.comㅤㅤⓕ QTA Printing Services</p></div>
+            </div>
+        </div>
+    </Body>
+</html>
