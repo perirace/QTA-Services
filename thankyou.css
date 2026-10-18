@@ -5,10 +5,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: #f3f3f1;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+
 
 /* Responsive container */
 .confirmation-receipt {
@@ -18,10 +19,35 @@ body {
   padding: 24px;       /* Comfortable breathing room on mobile edge */
 }
 
+.status-badge {
+  position: relative;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkmark-circle {
+  width: 70px;
+  height: 70px;
+  background: #00a8e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 168, 232, 0.2);
+}
+
+.checkmark-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
 /* Scalable heading */
 h1 {
   font-family: Arial;
-  color: #0b1a30;
+  color: black;
   /* Fluid typography: sizes range from 1.8rem on mobile up to 2.5rem on desktop */
   font-size: clamp(1.8rem, 4vw + 1rem, 2.5rem); 
   line-height: 1.3;
@@ -30,7 +56,7 @@ h1 {
 
 /* Scalable subtext */
 p {
-  color: white;
+  color: black;
   /* Fluid typography: sizes range from 1rem on mobile up to 1.15rem on desktop */
   font-size: clamp(1rem, 2vw + 0.5rem, 1.15rem);
   line-height: 1.6;
@@ -41,8 +67,8 @@ p {
 .page-wrapper {
   display: flex;
   justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */       /* Makes the parent take full screen height if needed */
-  background-color: #e2e8f0; /* Optional: background color */
+  align-items: center;     /* Centers vertically */       /* Makes the parent take full scrght if needed */
+  background-color: #f3f3f1; /* Optional: background color */
 }
 
 .ref-container {
@@ -143,11 +169,10 @@ p {
 .pipeline-banner {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
+ fffffn-items: center;
+  background-color: #f3f3f1;
   border-radius: 12px;
   padding: 15px 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   font-family: Arial;
   width: 120%;
   max-width: 300%;
