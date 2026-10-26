@@ -1,0 +1,126 @@
+
+
+    body { margin: 0; font-family: Arial; color: #000000; background: #FFFFFF; }
+    a { text-decoration: none; }
+    
+    .details {background: #f3f3f1;}
+    .container, .more, .inquiry { max-width: 1100px; margin: 0 auto; }
+    .image-box, .info, .details-text, .cards { min-width: 280px; }
+    .image-box, .info, .details-text { flex: 1; }
+    .back, .more-top a, .service a { color: #000000; }
+    .price span, .great, .card small, .service p { color: var(--soft-text); }
+    .card, .service { background: #FFFFFF; border-radius: 24px; }
+    .btn-primary, .btn-outline { padding: 14px 24px; border-radius: 8px; }
+    
+    .container {
+      padding: 60px 20px;
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .image-box { position: relative; }
+
+    .image-box img {
+      width: 100%;
+      display: block;
+      border: 6px solid #FFFFFF;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px var(--line);
+    }
+
+    .caption {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 12px 16px;
+      background: #FFFFFF;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .caption small { color: #FF00FF; font-weight: bold; font-size: 11px; letter-spacing: 1px; }
+    .caption strong { display: block; margin-top: 4px; }
+    .badge { background: #ADD8E6; color: #000000; font-size: 11px; font-weight: bold; padding: 6px 12px; border-radius: 8px; }
+    .category { color: #FF00FF; font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 30px 0 10px; }
+    .info h1 { font-size: 48px; font-weight: 800; margin: 0 0 16px; }
+    .desc { font-size: 16px; font-weight: bold; line-height: 1.6; }
+    hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
+    .price { display: flex; align-items: center; gap: 16px; }
+    .price strong { color: #000000; font-size: 24px; }
+    .price span { font-size: 13px; }
+    .great { font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 28px; }
+
+    .tags span {
+      background: #ADD8E6;
+      color: #000000;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 20px;
+    }
+
+    .btn-primary, .btn-outline { display: inline-block; margin-right: 8px; }
+    .btn-primary { background-color: #00FFFF; color: #000000; }
+    .btn-outline { background-color: #FFFFFF; color: #000000; border: 1px solid var(--line); } 
+
+    .details-text h2 { font-size: 40px; font-weight: 800; line-height: 1.05; margin: 8px 0 20px; }
+    .lead { font-size: 18px; line-height: 1.7; }
+
+    .help-box {
+      background: #FFFFFF;
+      border: 1px solid #FFFF00;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-top: 30px;
+    }
+
+    .help-box strong { display: block; margin-bottom: 8px; }
+    .help-box p { margin: 0; font-size: 15px; line-height: 1.6; }
+    .cards { flex: 1.2; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); padding: 28px; min-height: 130px; }
+
+    .num {
+      display: inline-block;
+      background: #ADD8E6;
+      color: #000000;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 12px 14px;
+      border-radius: 12px;
+    }
+
+    .card small { display: block; margin: 24px 0 8px; font-size: 11px; font-weight: bold; letter-spacing: 2px; }
+    .card strong { font-size: 19px; }
+
+    .more { padding: 40px 20px 60px; }
+    .more-top { display: flex; align-items: center; justify-content: space-between; }
+    .more h2 { font-size: 40px; font-weight: 800; margin: 8px 0 30px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .service { border: 1px solid var(--line); overflow: hidden; }
+    .service img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .service div { padding: 24px; }
+    .service small { color: #000000; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+    .service h3 { margin: 10px 0; font-size: 24px; }
+    .service p { font-size: 16px; line-height: 1.6; }
+    .service a { font-weight: bold; font-size: 14px; }
+
+    .inquiry {
+      margin-bottom: 60px;
+      padding: 60px 20px;
+      background: #FF00FF;
+      color: #000000;
+      text-align: center;
+      border-radius: 28px;
+    }
+
+    .inquiry small { font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+    .inquiry h2 { font-size: 40px; font-weight: 800; margin: 12px auto; max-width: 600px; }
+    .inquiry p { font-size: 16px; margin: 0 0 28px; }
+    .inquiry a { display: inline-block; background: #FFFFFF; color: #000000; padding: 14px 28px; border-radius: 10px; }
+    
