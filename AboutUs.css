@@ -1,0 +1,163 @@
+
+
+        h1, h2, h3, h4, p, .inquiry-btn { font-family: Arial; }
+        h1 { margin: 0; font-size: 48px; font-weight: 800; text-align: center; }
+        h2, h3, h4 { margin: 0 0 0 40px; }
+        p { margin: 20px 0 20px 40px; text-align: left; }
+        .description { font-weight: bold; color: #FF00FF;}
+        .about-title { margin-left: 40px; text-align: left; }
+        
+
+        .AUsubcontainer1P1, .AUsubcontainer1P2, .AUsubcontainer2P1, .AUsubcontainer2P2,
+        .AUsubcontainer3P1, .AUsubcontainer3P2, .AUsubcontainer4P1, .AUsubcontainer4P2 {
+        margin-right: 40px;
+        margin-bottom: 30px;
+        }
+        
+
+        .AUcontainer1 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #f3f3f1;
+        margin-bottom: 18px;
+        }
+        .AUsubcontainer1P1 { display: flex; justify-content: center; align-items: center; margin-top: 30px; }
+        .AUsubcontainer1P2 { display: flex; flex-direction: column; justify-content: center; margin-top: 30px; }
+    
+
+        .story-image { position: relative; width: min(440px, 100vw - 80px); }
+        .story-image img { display: block; width: 100%; border-radius: 20px; }
+        .years-badge {
+        position: absolute;
+        right: -10px;
+        bottom: -14px;
+        width: 210px;
+        padding: 14px;
+        box-sizing: border-box;
+        background: #FF00FF;
+        border-radius: 14px;
+        }
+        .years-badge strong { font-size: 24px; }
+        .years-badge p { margin: 4px 0 0; font-size: 13px; }
+        .story-first { margin-bottom: 18px; }
+        .story-second { margin-top: 0; }
+        
+     
+        .AUcontainer2 { display: flex; flex-direction: column; margin-bottom: 38px; }
+        .AUsubcontainer2P1 { display: flex; flex-direction: column; }
+        .AUsubcontainer2P1 h2, .AUsubcontainer2P1 p { text-align: center; }
+        .AUsubcontainer2P2 { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+        
+
+        .AUsmallcontainer2, .service-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        box-shadow: 0 1px 4px #f3f3f1;
+        overflow: hidden;
+        }
+        .AUsmallcontainer2 { flex: 0 1 250px; background-color: #f3f3f1; }
+        .service-card { flex: 0 1 340px; background-color: #fffdf8; }
+        
+        .AUverysmallcontainer2, .service-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px 20px 24px;
+        }
+        .AUverysmallcontainer2 { gap: 12px; }
+        .AUverysmallcontainer2 h2 { margin: 20px 0 0 25px; }
+        .AUverysmallcontainer2 p { margin-left: 25px; }
+        .AUverysmallcontainer2 .description { margin-bottom: 0; }
+
+
+        .AUcontainer3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 850px;
+        background-color: #f3f3f1;
+        }
+        .AUsubcontainer3P1 { display: flex; flex-direction: column; align-items: center; }
+        .AUsubcontainer3P1 h2, .AUsubcontainer3P1 p { text-align: center; }
+        .compliance-badge {
+        width: 300px;
+        max-width: 100%;
+        margin-top: 0;
+        background-color: #f3f3f1;
+        border-radius: 6px;
+        }
+        .credentials-text { margin: 0; }
+        .AUsubcontainer3P2 { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; }
+        
+        .service-image { height: 190px; background-color: #f3f3f1; }
+        .service-title { margin: 0 0 8px; font-size: 22px; font-weight: 800; color: #000000; }
+        .service-desc { margin: 0 0 16px; font-size: 14px; line-height: 1.5; color: #000000; }
+        .service-divider { margin: 0 0 16px; border: none; border-top: 1px solid #f3f3f1; }
+        .service-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+        .service-price, .service-link { font-size: 14px; }
+        .service-price { font-weight: 700; color: #000000; }
+        .service-link { color: #000000; cursor: pointer; }
+        
+
+        .AUsubcontainer3P3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 190px;
+        width: 1150px;
+        max-width: calc(100% - 40px);
+        height: 130px;
+        margin: 0 auto;
+        background: #FF00FF;
+        border-radius: 10px;
+        }
+        .cta-text h2 { margin: 10px 0 0 10px; }
+        .cta-text p { margin-left: 10px; }
+        .inquiry-btn {
+        padding: 8px;
+        font-size: 12.5px;
+        color: #000000;
+        text-decoration: none;
+        background-color: #fffdf8;
+        border-radius: 6px;
+        }
+        
+
+        .AUcontainer4 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 160px;
+        background-color: #000000;
+        color: #ffffff;
+        }
+        .AUcontainer4 .AUsubcontainer4P1, .AUsubcontainer4P2 { display: flex; justify-content: center; flex-wrap: wrap;}
+        .AUsubcontainer4P1 { gap: 80px; }
+        .AUsubcontainer4P2 { gap: 160px; }
+        
+
+        img { max-width: 100%; }
+        
+        @media (max-width: 1200px) {
+        .AUcontainer3 { height: auto; flex-wrap: nowrap; }
+        .AUsubcontainer3P3 { height: auto; flex-direction: column; gap: 20px; padding: 24px 0; }
+        .cta-text h2, .cta-text p { margin-left: 0; text-align: center; }
+        .cta-text br { display: none; }
+        }
+        
+        @media (max-width: 1000px) {
+        .hero-text br, .AUsubcontainer1P2 br, .credentials-text br, .service-desc br { display: none; }
+        
+        .about-title { font-size: 36px; }
+        .AUsubcontainer1P1 { margin-right: 0; }
+        .AUcontainer4 { height: auto; }
+        .AUsubcontainer4P1, .AUsubcontainer4P2 { gap: 20px 40px; }
+        }
+        
+        @media (max-width: 600px) {
+        .about-title { font-size: 28px; }
+        }
