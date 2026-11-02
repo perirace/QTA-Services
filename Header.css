@@ -1,0 +1,107 @@
+ body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #000000;
+}
+ 
+.header {
+  background-color: #FFFFFF;
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.logo {
+  display: flex;
+  align-items: center;
+}
+ 
+.logo-box {
+  background-color: #00FFFF;
+  border-bottom: 5px solid #FF00FF;
+  width: 45px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+ 
+.logo h2 {
+  margin: 0;
+  font-size: 22px;
+}
+ 
+.logo p {
+  white-space: nowrap;
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #808080;
+}
+ 
+.menu {
+  display: flex;
+  align-items: center;
+}
+ 
+.menu a {
+  white-space: nowrap;
+  color: #808080;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+}
+ 
+.menu .contact {
+  background-color: #00FFFF;
+  color: #000000;
+  padding: 12px;
+  border-radius: 8px;
+  margin-right: 0;
+}
+ 
+.quote {
+  white-space: nowrap;
+  background-color: #FF00FF;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-radius: 12px;
+}
+ 
+@media (max-width: 1100px) {
+  .header {
+    padding: 0 20px;
+  }
+ 
+  .menu a {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+ 
+  .quote {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+}
+ 
+@media (max-width: 800px) {
+  .header {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 20px;
+  }
+ 
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}
