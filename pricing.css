@@ -1,0 +1,900 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  background-color: #f3f3f1;
+}
+
+/* Headers use Archivo, everything else inherits Manrope from body */
+h1,
+h2,
+h3 {
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Buttons don't inherit the page font by default */
+button {
+  font-family: inherit;
+}
+
+.title-description {
+  color: magenta;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.maintitle {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background-color: black;
+}
+
+/* Teal ring in the top-right corner */
+.maintitle::before {
+  content: "";
+  position: absolute;
+  top: -117px;
+  right: -81px;
+  width: 347px;
+  height: 347px;
+  border: 63px solid rgba(0, 255, 255, 0.32);
+  border-radius: 50%;
+}
+
+/* Tilted purple square at the bottom-left */
+.maintitle::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  bottom: -115px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 0, 255, 0.16);
+  border-radius: 40px;
+  transform: rotate(12deg);
+}
+
+/* Keeps the content above the shapes */
+.maintitle > div {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.title {
+  color: white;
+  font-size: clamp(2.25rem, 1rem + 5.2vw, 4.625rem);
+  font-weight: 900;
+  margin: 0px 0px 16px 0px;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  color: lightgray;
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.highlight {
+  color: yellow;
+}
+
+.highlight1 {
+  color: cyan;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Same 1200px container as the sections on the other pages */
+.pricing-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/*Pls note */
+.plsnote-card {
+  background-color: #fcfae4;
+  border-radius: 16px;
+  border: 1px solid yellow;
+  margin: -50px 0 32px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.plsnote-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: yellow;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.plsnote-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*Buttons*/
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-selected {
+  background-color: cyan;
+  font-size: clamp(0.9375rem, 0.875rem + 0.25vw, 1rem);
+  font-weight: 500;
+  padding: 5px 16px;
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.2s ease;
+}
+
+.pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.btn {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  font-size: clamp(0.9375rem, 0.875rem + 0.25vw, 1rem);
+  font-weight: 500;
+  padding: 5px 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover,
+.btn-selected:hover {
+  background-color: #f5f5f5;
+  border-color: #bdbdbd;
+}
+
+/*TABLE CHART*/
+.table-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin: 20px 0 48px;
+}
+
+.table-header {
+  background: #000000;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-header h2 {
+  margin: 0;
+  font-size: clamp(18px, 16px + 0.5vw, 22px);
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.table-header .starting-rates {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+}
+
+.col-headers {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr 1fr 0.7fr;
+  column-gap: 16px;
+  background-color: #e6e6e6;
+  padding: 12px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.col-headers span:last-child {
+  text-align: right;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr 1fr 0.7fr;
+  column-gap: 16px;
+  align-items: center;
+  padding: 20px 24px;
+  border-top: 1px solid #dceaf2;
+}
+
+.row-service {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.row-spec {
+  font-size: 14px;
+  color: #333;
+}
+
+/* One column, the dropdowns stack with the same width */
+.row-spec-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 172px;
+}
+
+.row-spec-stack .spec-select {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Real <select> dropdowns, the arrow is drawn as a background image */
+.spec-select,
+.spec-select-colored {
+  appearance: none;
+  background-color: #e9e9e9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%23777' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 32px 8px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.spec-select {
+  width: fit-content;
+  min-width: 110px;
+}
+
+.spec-select-colored {
+  width: 100%;
+  min-width: 0;
+}
+
+.row-qty {
+  font-size: 14px;
+  color: #333;
+}
+
+.row-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+}
+
+/* Swipe hint under the table, same as the Service page */
+.guide {
+  margin: -44px 0 0 0;
+  font-size: clamp(14px, 13px + 0.3vw, 16px);
+  text-align: left;
+}
+
+.fakescrollbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin: -15px 0 48px auto;
+}
+
+.fakescrollbarthumb {
+  width: 90px;
+  height: 8px;
+  background-color: #d9d9d9;
+  border-radius: 999px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*CALCULATOR*/
+.calculator-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e3;
+  border-radius: 24px;
+  padding: 8px;
+}
+
+/* ✅ NEW: holds .calculator and .summary-card side by side,
+   like your target screenshot. Nothing existing was renamed.
+   align-items: stretch makes both columns match the taller one's height */
+.calculator-wrapper {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+/* ✅ FIX: stretch the Select Service dropdown to full width */
+.selectservice .textbox {
+  width: 100%;
+}
+
+/* ✅ NEW: right-aligned hint text next to each section's h3,
+   e.g. "Choose your print product" */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-hint {
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 400;
+}
+
+.calculator {
+  flex: 1;
+  min-width: 320px;
+}
+
+.calculator h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.title1 {
+  font-size: clamp(1.75rem, 1rem + 2.5vw, 2.5rem);
+  font-weight: 800;
+  margin: 0px 0px 1rem 0px;
+  line-height: 1.2;
+}
+
+.subtitle1 {
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  line-height: 1.5;
+  color: #5f6368;
+  margin: 0 0 24px 0;
+}
+
+.textbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  width: fit-content;
+  min-width: 280px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Real <select> dropdowns, the arrow is drawn as a background image */
+select.textbox {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  font-family: inherit;
+}
+
+.textbox:hover {
+  border-color: #bdbdbd;
+}
+
+/* The real input sits inside .textbox, so it has no border or background of its own */
+.textbox-input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+/* Dark border while typing, same as the Contact form */
+.textbox:focus-within {
+  border-color: #000000;
+}
+
+.buttons .textbox-input {
+  text-align: center;
+}
+
+.guide-selectservice {
+  margin: 12px 0 24px;
+  font-size: 14px;
+  color: #5f6368;
+  text-align: left;
+}
+
+.ft {
+  color: #999;
+  font-weight: 400;
+}
+
+/* ✅ FIX: make the dropdown/input boxes fill their column instead of
+   staying at min-width 280px and leaving a big empty gap before the
+   next field (this was causing Height / Material Finishing to look
+   like they were floating far to the right) */
+.dimension-row .textbox,
+.calc-row>.field-group>.textbox {
+  width: 100%;
+  min-width: 0;
+}
+
+.dimension-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* ✅ FIX: merged your two separate .field-group rules into one
+   (display/flex-direction/gap + flex:1) — same result, less confusing */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.width,
+.height {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+.calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Three fields share the row, and wrap onto the next line on small screens */
+.calc-row > .field-group {
+  min-width: 180px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ FIX: scoped override so the Quantity number box stays small
+   instead of inheriting .textbox's 280px min-width */
+.buttons .textbox {
+  min-width: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.addbtn,
+.subbtn {
+  margin: 0;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.addbtn:hover,
+.subbtn:hover {
+  background-color: #f5f5f5;
+  border-color: #bdbdbd;
+}
+
+.buttons .textbox {
+  font-weight: 700;
+}
+
+/* Summary card */
+.summary-card {
+  border: 1px solid #e5e5e3;
+  background-color: #fafaf8;
+  border-radius: 16px;
+  padding: 24px;
+  width: 340px;
+  flex-shrink: 0;
+  /* Only as tall as its content, and sits in the middle beside the calculator */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.summary-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.summary-details {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e3;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.summary-line span:first-child {
+  color: #5f6368;
+}
+
+.summary-line span:last-child {
+  font-weight: 700;
+  color: #000000;
+  text-align: right;
+}
+
+.production-total {
+  background-color: #d9fbfb;
+  border-radius: 12px;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.production-total p {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.total-amount {
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2rem);
+  font-weight: 900;
+  color: #000000;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #00ffff;
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  min-height: 48px;
+  padding: 12px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.submit-btn:hover {
+  background-color: #00e6e6;
+}
+
+.icon-arrow {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover .icon-arrow{
+  transform: translateX(3px);
+}
+
+.cta-btn:hover .icon-arrow {
+    transform: translateX(3px);
+}
+
+.summary-note {
+  margin: 16px 0 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5f6368;
+}
+
+/* CTA card */
+.cta-card {
+  position: relative;
+  overflow: hidden;
+  background-color: magenta;
+  border-radius: 28px;
+  box-shadow: 0 1px 4px lightgray;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: 0 auto 96px;
+  padding: 56px 40px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Soft ring in the top-left corner */
+.cta-card::before {
+  content: "";
+  position: absolute;
+  top: -81px;
+  left: -64px;
+  width: 224px;
+  height: 224px;
+  border: 38px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+/* Tilted pink square in the bottom-right corner */
+.cta-card::after {
+  content: "";
+  position: absolute;
+  right: -65px;
+  bottom: -123px;
+  width: 240px;
+  height: 240px;
+  background-color: #ff4dab;
+  border-radius: 40px;
+  transform: rotate(12deg);
+}
+
+/* Keeps the content above the shapes */
+.cta-text,
+.cta-buttons {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-text {
+  max-width: 620px;
+}
+
+.cta-title {
+  font-size: clamp(28px, 16px + 2.5vw, 40px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  margin: 0 0 16px 0;
+  color: #111;
+}
+
+.cta-desc {
+  font-size: clamp(15px, 14px + 0.25vw, 16.8px);
+  color: #333;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-size: clamp(0.9375rem, 0.875rem + 0.25vw, 1rem);
+  font-weight: 500;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: cyan;
+  transform: translateY(1px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/*Responsive*/
+/* Tablet Devices (1024px and below) */
+@media (max-width: 1024px) {
+  /* Category pills stay on one line and swipe sideways instead of stacking */
+  .pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    min-width: 0;
+  }
+
+  .pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pills .btn,
+  .pills .btn-selected {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+/* Tablet Devices (900px and below) */
+@media (max-width: 900px) {
+  /* Pushes the shapes further into the corners so they clear the text */
+  .maintitle::before {
+    top: -200px;
+    right: -200px;
+  }
+
+  .maintitle::after {
+    bottom: -170px;
+  }
+
+  .cta-card::before {
+    top: -150px;
+    left: -130px;
+  }
+
+  .cta-card::after {
+    right: -150px;
+    bottom: -175px;
+  }
+
+  .cta-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 24px;
+    margin: 0 auto 60px;
+  }
+
+  /* Calculator and summary stack instead of squeezing side by side */
+  .calculator {
+    flex-basis: 100%;
+  }
+
+  .summary-card {
+    width: 100%;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  .cta-btn {
+    width: 100%;
+  }
+
+  .calculator-wrapper {
+    gap: 24px;
+    padding: 16px;
+  }
+
+  /* The table keeps its columns and swipes sideways */
+  .table-card {
+    overflow-x: auto;
+  }
+
+  .col-headers,
+  .table-row {
+    min-width: 600px;
+  }
+
+  /* The black header stays in place while the rows scroll under it */
+  .table-header {
+    position: sticky;
+    left: 0;
+  }
+}
+
+/* Tablet and Desktop (768px and up) */
+@media (min-width: 768px) {
+  .pricing-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+/* Desktop (960px and up) */
+@media (min-width: 960px) {
+  .maintitle > div {
+    padding: 60px 40px 96px;
+  }
+}
+
+/* Small Mobile Devices (600px and below) */
+@media (max-width: 600px) {
+  .plsnote-card {
+    margin: -30px 0 30px 0;
+    padding: 20px;
+  }
+
+  /* The fake scrollbar moves under the hint instead of overlapping the wrapped text */
+  .fakescrollbar {
+    margin-top: 12px;
+  }
+
+  .fakescrollbarthumb {
+    width: 60px;
+  }
+
+  .table-header {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  /* Releases the desktop minimum widths so nothing spills past the screen */
+  .calculator,
+  .textbox,
+  .dimension-row .field-group {
+    min-width: 0;
+  }
+
+  .summary-card {
+    padding: 20px;
+  }
+}
